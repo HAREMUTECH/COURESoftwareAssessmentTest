@@ -5,6 +5,6 @@
         public string Name { get; set; }
         public int CountryCode { get; set; }
         public string CountryIso { get; set; }
-        public List<CountryOperaorDetailDto> CountryOperaorDetailDtos { get; set; }
+        public List<CountryOperaorDetailDto> countryDetails { get; set; }
     }
 }

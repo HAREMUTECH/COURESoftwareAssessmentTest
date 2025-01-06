@@ -5,8 +5,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace COURESoftwareAssessmentTest.WebApi.Controllers
 {
-    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [Route("[controller]")]
     public class CountryController : ControllerBase
     {
         private readonly ILogger<CountryController> _logger;

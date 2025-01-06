@@ -17,6 +17,14 @@ namespace COURESoftwareAssessmentTest.WebApi.Services
 
         public async Task<BaseResponse<PhoneDetail>> GetCountryNetworkProviderByPhoneNumberCountryCode(string phoneNumber)
         {
+            if (string.IsNullOrWhiteSpace(phoneNumber))
+            {
+                return new BaseResponse<PhoneDetail>
+                {
+                    Message = "Invalid input",
+                    Status = true
+                };
+            }
             int countryCode = ExtractFirstThreeDigits(phoneNumber);
             _logger.LogInformation($"Starting {nameof(GetCountryNetworkProviderByPhoneNumberCountryCode)} .");
             try
@@ -37,7 +45,7 @@ namespace COURESoftwareAssessmentTest.WebApi.Services
                     Name = phoneCountrycodeDetail.Name,
                     CountryCode = phoneCountrycodeDetail.CountryCode,
                     CountryIso = phoneCountrycodeDetail.CountryIso,
-                    CountryOperaorDetailDtos = phoneCountrycodeDetail.CountryDetails.Select(x => new CountryOperaorDetailDto
+                    countryDetails = phoneCountrycodeDetail.CountryDetails.Select(x => new CountryOperaorDetailDto
                     {
                         Operator = x.Operator,
                         OperatorCode = x.OperatorCode,
@@ -48,6 +56,7 @@ namespace COURESoftwareAssessmentTest.WebApi.Services
 
                 var phoneNumberInformation = new PhoneDetail
                 {
+
                     Number = phoneNumber,
                     Country = data
                 };
@@ -56,7 +65,8 @@ namespace COURESoftwareAssessmentTest.WebApi.Services
                 return new BaseResponse<PhoneDetail>
                 {
                     Data = phoneNumberInformation,
-                    Status = true
+                    Status = true,
+                    Message = "Record retrieved Successfully"
                 };
             }
             catch (Exception ex)
