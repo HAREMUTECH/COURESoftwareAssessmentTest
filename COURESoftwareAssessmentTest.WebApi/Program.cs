@@ -2,6 +2,7 @@ using COURESoftwareAssessmentTest.WebApi.Data;
 using COURESoftwareAssessmentTest.WebApi.Dto;
 using COURESoftwareAssessmentTest.WebApi.Repository;
 using COURESoftwareAssessmentTest.WebApi.Services;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System;
@@ -19,6 +20,14 @@ Log.Logger = new LoggerConfiguration()
 
 
 builder.Host.UseSerilog();
+
+
+builder.Services.AddApiVersioning(config =>
+{
+    config.DefaultApiVersion = new ApiVersion(1, 0);
+    config.AssumeDefaultVersionWhenUnspecified = true;
+    config.ReportApiVersions = true;
+});
 
 // Add services to the container.
 
