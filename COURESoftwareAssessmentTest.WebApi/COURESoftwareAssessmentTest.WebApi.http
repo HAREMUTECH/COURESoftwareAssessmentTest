@@ -1,0 +1,6 @@
+@COURESoftwareAssessmentTest.WebApi_HostAddress = http://localhost:5201
+
+GET {{COURESoftwareAssessmentTest.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

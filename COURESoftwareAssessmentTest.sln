@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35521.163 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COURESoftwareAssessmentTest.CodeChallenge", "COURESoftwareAssessmentTest.CodeChallenge\COURESoftwareAssessmentTest.CodeChallenge.csproj", "{974A0D54-CCF1-420F-AD34-018075C0DE51}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "COURESoftwareAssessmentTest.WebApi", "COURESoftwareAssessmentTest.WebApi\COURESoftwareAssessmentTest.WebApi.csproj", "{3A031296-A607-4B09-903A-EB3E172FB2E6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{974A0D54-CCF1-420F-AD34-018075C0DE51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{974A0D54-CCF1-420F-AD34-018075C0DE51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{974A0D54-CCF1-420F-AD34-018075C0DE51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A031296-A607-4B09-903A-EB3E172FB2E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A031296-A607-4B09-903A-EB3E172FB2E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A031296-A607-4B09-903A-EB3E172FB2E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A031296-A607-4B09-903A-EB3E172FB2E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
